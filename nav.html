@@ -12,23 +12,36 @@
       <!-- This is for Desktop Screen Size -->
       <div class="navLinks">
         <li id="Home"><a href="/">Home</a></li>
-        <lable for="services">
-          <select name="src" id="services">
-            <option value=""><a href="/services">Services</a></option>
-            <option value="/loading.html">
-              <a href="/services">Disese</a>
-            </option>
-            <option value="/"><a href="/services">Booking</a></option>
-          </select>
-        </lable>
-
-        <lable for="about">
-          <select name="about" id="about">
-            <option value=""><a href="/services">Booking</a></option>
-            <option value="/"><a href="/services">Doctor</a></option>
-          </select>
-        </lable>
-
+        <ul id="DD" class="dropDown">
+          <li><a href="#">Services</a></li>
+          <div>
+            <li><a href="#">Service 1</a></li>
+            <div id="DD" class="insideDropDown">
+              <li><span>Sub Service</span></li>
+              <div>
+                <li><a href="#">Service 1</a></li>
+                <li><a href="#">S 2</a></li>
+                <li><a href="#">Service 3</a></li>
+              </div>
+            </div>
+            <li><a href="#">Service 3</a></li>
+          </div>
+        </ul>
+        <ul id="DD" class="dropDown">
+          <li><a href="#">Services</a></li>
+          <div>
+            <li><a href="#">Service 1</a></li>
+            <div id="DD" class="insideDropDown">
+              <li><span>Sub Service</span></li>
+              <div>
+                <li><a href="#">Service 1</a></li>
+                <li><a href="#">S 2</a></li>
+                <li><a href="#">Service 3</a></li>
+              </div>
+            </div>
+            <li><a href="#">Service 3</a></li>
+          </div>
+        </ul>
         <li id="About"><a href="/about">About</a></li>
         <li id="Contact"><a href="/contact">Contact</a></li>
       </div>
@@ -36,7 +49,9 @@
       <!-- This is for Moblie Screeen Size -->
       <button class="bugerMenu" onclick=" NavDialog.showModal()">Ⅲ</button>
       <dialog id="NavDialog">
-        <div class="dialogCloseBtn"><button onclick="NavDialog.close()">X</button></div>
+        <div class="dialogCloseBtn">
+          <button onclick="NavDialog.close()">X</button>
+        </div>
         <div class="dialogLinks">
           <li id="Home"><a href="/">Home</a></li>
           <lable for="services">

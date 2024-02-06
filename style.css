@@ -40,6 +40,10 @@ nav {
   margin: 0 20px;
 }
 
+a {
+  text-decoration: none;
+}
+
 lable {
   font-size: large;
   display: flex;
@@ -60,10 +64,19 @@ select {
 }
 
 .navLinks > li {
+  display: flex;
+  align-items: flex-end;
+  height: 70px;
+  font-size: large;
+  list-style-type: none;
+  margin: 0 5px;
+  padding-bottom: 8.5px;
+}
+/* .navLinks > ul > li {
   font-size: large;
   list-style-type: none;
   margin: 5px;
-}
+} */
 
 lable::after {
   content: "▾";
@@ -72,7 +85,6 @@ lable::after {
 }
 
 .navLinks > li > a {
-  text-decoration: none;
   color: var(--text);
 }
 
@@ -109,7 +121,6 @@ lable::after {
 }
 
 .dialogLinks > li > a {
-  text-decoration: none;
   /* color: var(--text); */
 }
 
@@ -140,7 +151,8 @@ dialog {
   height: max-content;
   max-height: 500px;
   border: none;
-  box-shadow: 0 4px 8px rgba(78, 108, 228, 0.503);
+  border-radius: 10px;
+  box-shadow: 0 4px 18px rgba(78, 108, 228, 0.503);
 }
 
 dialog::backdrop {
@@ -164,4 +176,85 @@ dialog::backdrop {
   .bugerMenu {
     display: block; /* or display: flex; depending on your design */
   }
+}
+
+/* .dropDown > li{
+  transform: translateY(-100px);
+}
+
+.dropDown:hover li{
+  transform: translateY(10px);
+  transition-duration: 1s;
+}
+.dropDown :not(:hover) li{
+  transform: translateY(-100px);
+  transition-duration: 1s;
+} */
+
+#DD::after {
+  content: "▾";
+  color: var(--text);
+}
+
+.dropDown {
+  display: flex;
+  align-items: flex-end;
+  height: 70px;
+  font-size: large;
+  list-style-type: none;
+  margin: 0 5px;
+  padding: 0;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.dropDown > div {
+  display: none;
+}
+
+div > li {
+  border-bottom: solid 1px white;
+  padding: 0 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.dropDown:hover > div {
+  width: max-content;
+  display: block;
+  background-color: var(--secondary);
+  color: var(--text);
+  position: absolute;
+  top: 90%;
+  left: 90%;
+}
+
+.insideDropDown {
+  display: flex;
+  align-items: flex-end;
+  /* height: 70px; */
+  font-size: large;
+  list-style-type: none;
+  /* margin: 0 5px; */
+  padding:0 10px;
+  /* padding-bottom: 20px; */
+  position: relative;
+}
+
+.insideDropDown > div {
+  display: none;
+}
+
+div > li {
+  border-bottom: solid 1px white;
+}
+
+.insideDropDown:hover > div {
+  width: max-content;
+  display: block;
+  background-color: var(--primary);
+  color: var(--bg);
+  position: absolute;
+  top: 90%;
+  left: 90%;
 }
