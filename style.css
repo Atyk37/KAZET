@@ -2,8 +2,9 @@
 :root {
   /* --text: #0a1c4d; */
   --text: #10296d;
+  --text-hover: #f1f1f1;
   --bg: #fbfefd;
-  --nav-bg: #fcfcfc;
+  --nav-bg: #f0f0f0;
   --primary: #5c8dff;
   --secondary: #8fbaef;
   --accent: #4e6ce480;
@@ -38,10 +39,13 @@ nav {
 .navLinks {
   display: flex;
   margin: 0 20px;
+  height: 100%;
 }
 
 a {
   text-decoration: none;
+  color: var(--text);
+
 }
 
 lable {
@@ -66,17 +70,11 @@ select {
 .navLinks > li {
   display: flex;
   align-items: flex-end;
-  height: 70px;
+  height: 74px;
   font-size: large;
   list-style-type: none;
   margin: 0 5px;
-  padding-bottom: 8.5px;
 }
-/* .navLinks > ul > li {
-  font-size: large;
-  list-style-type: none;
-  margin: 5px;
-} */
 
 lable::after {
   content: "▾";
@@ -86,15 +84,22 @@ lable::after {
 
 .navLinks > li > a {
   color: var(--text);
+  font-size: larger;
+  padding: 0 7px 10px 7px;
+
 }
 
 .navLinks > li:hover {
   background-color: var(--primary);
 }
-.navLinks > li > a:target {
+
+.navLinks > li:hover a {
+  color:var(--text-hover);
+}
+/* .navLinks > li > a:target {
   border: solid 2px red;
   color: red;
-}
+} */
 
 .bugerMenu {
   height: auto;
@@ -120,17 +125,17 @@ lable::after {
   color: var(--text);
 }
 
-.dialogLinks > li > a {
-  /* color: var(--text); */
-}
 
 .dialogLinks > li:hover {
   background-color: var(--primary);
 }
-.dialogLinks > li > a:target {
+.dialogLinks > li:hover {
+  background-color: var(--primary);
+}
+/* .dialogLinks > li > a:target {
   border: solid 2px red;
   color: red;
-}
+} */
 
 .dialogCloseBtn {
   display: flex;
@@ -160,6 +165,105 @@ dialog::backdrop {
   /* filter: blur(90px); */
 }
 
+#DD::after {
+  content: "▾";
+  color: var(--text);
+}
+
+.dropDown {
+  display: flex;
+  align-items: flex-end;
+  height: 65px;
+  font-size: large;
+  list-style-type: none;
+  margin: 0 5px;
+  padding: 0 7px 10px 7px;
+  position: relative;
+}
+
+.dropDown > li > a{
+  font-size: larger;
+}
+.dropDown:hover > li > a{
+  color: var(--text-hover);
+}
+
+.dropDown:hover{
+  background-color: var(--primary);
+  
+}
+.dropDown > .foldedDropDown {
+  display: none;
+}
+
+.dropDown > .foldedDropDown > li {
+  border-bottom: solid 1px white;
+  padding: 0 5px;
+  font-size: large;
+  display: flex;
+  justify-content: center;
+}
+
+.dropDown:hover > .foldedDropDown {
+  width: max-content;
+  display: block;
+  background-color: var(--secondary);
+  color: var(--text);
+  position: absolute;
+  margin-top: 2px;
+  top: 98%;
+  left: 0%;
+}
+
+
+.insideDropDown {
+  display: flex;
+  align-items: flex-end;
+  font-size: large;
+  list-style-type: none;
+  padding:3px 10px;
+  position: relative;
+  border-bottom: solid 1px white;
+}
+
+.insideDropDown:hover{
+  background-color: var(--primary);
+  /* color: var(--text-hover); */
+}
+
+.insideDropDown > .foldedDropDown {
+  display: none;
+}
+
+.dropDown > .foldedDropDown > li {
+  border-bottom: solid 1px white;
+  padding: 3px 10px;
+}
+
+.foldedDropDown > li {
+  border-bottom: solid 1px white;
+  padding: 3px 10px;
+}
+
+.foldedDropDown > li:hover {
+  background-color: var(--primary);
+}
+
+.insideDropDown:hover > .foldedDropDown {
+  width: max-content;
+  display: block;
+  background-color: var(--secondary);
+  color: var(--text-hover);
+  position: absolute;
+  margin-top: 2px;
+  top: 5%;
+  left: 98%;
+}
+
+.dropDown > .foldedDropDown > li:hover{
+  background-color: var(--primary);
+}
+
 @media (min-width: 700px) {
   .navLinks {
     display: flex;
@@ -178,83 +282,3 @@ dialog::backdrop {
   }
 }
 
-/* .dropDown > li{
-  transform: translateY(-100px);
-}
-
-.dropDown:hover li{
-  transform: translateY(10px);
-  transition-duration: 1s;
-}
-.dropDown :not(:hover) li{
-  transform: translateY(-100px);
-  transition-duration: 1s;
-} */
-
-#DD::after {
-  content: "▾";
-  color: var(--text);
-}
-
-.dropDown {
-  display: flex;
-  align-items: flex-end;
-  height: 70px;
-  font-size: large;
-  list-style-type: none;
-  margin: 0 5px;
-  padding: 0;
-  padding-bottom: 20px;
-  position: relative;
-}
-
-.dropDown > div {
-  display: none;
-}
-
-div > li {
-  border-bottom: solid 1px white;
-  padding: 0 5px;
-  display: flex;
-  justify-content: center;
-}
-
-.dropDown:hover > div {
-  width: max-content;
-  display: block;
-  background-color: var(--secondary);
-  color: var(--text);
-  position: absolute;
-  top: 90%;
-  left: 90%;
-}
-
-.insideDropDown {
-  display: flex;
-  align-items: flex-end;
-  /* height: 70px; */
-  font-size: large;
-  list-style-type: none;
-  /* margin: 0 5px; */
-  padding:0 10px;
-  /* padding-bottom: 20px; */
-  position: relative;
-}
-
-.insideDropDown > div {
-  display: none;
-}
-
-div > li {
-  border-bottom: solid 1px white;
-}
-
-.insideDropDown:hover > div {
-  width: max-content;
-  display: block;
-  background-color: var(--primary);
-  color: var(--bg);
-  position: absolute;
-  top: 90%;
-  left: 90%;
-}
