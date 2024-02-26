@@ -49,25 +49,6 @@ main {
 }
 
 /* Nav CSS Started */
-
-@media (min-width: 700px) {
-  .navLinks {
-    display: flex;
-  }
-  .bugerMenu {
-    display: none !important;
-  }
-}
-
-@media (max-width: 700px) {
-  .navLinks {
-    display: none !important;
-  }
-  .bugerMenu {
-    display: block; /* or display: flex; depending on your design */
-  }
-}
-
 nav {
   position: sticky;
   top: 0;
@@ -336,6 +317,26 @@ nav>.navLinks>#DD::after {
   background-color: var(--primary);
 }
 
+
+@media (min-width: 700px) {
+	.navLinks {
+	  display: flex;
+	}
+	.bugerMenu {
+	  display: none !important;
+	}
+  }
+  
+  @media (max-width: 700px) {
+	.navLinks {
+	  display: none !important;
+	}
+	.bugerMenu {
+	  display: block; /* or display: flex; depending on your design */
+	}
+
+  }
+  
 /* Nav CSS Finished */
 
 /* Hero Section (Home Page) CSS Started */
@@ -343,6 +344,7 @@ nav>.navLinks>#DD::after {
 #heroSection {
   width: 100%;
   height: 80vh;
+  margin-top: -10px;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -393,11 +395,28 @@ nav>.navLinks>#DD::after {
 
 @media (max-width: 700px) {
 	#heroSection {
+		width: calc(100% + 40px);
+		height: 90vh;
+		padding: 0 -20px;
+		position: relative;
+		background: url(./asset/bg-video.mp4) no-repeat center center fixed;
+		background-size: cover;
+		-webkit-background-size: cover; /* For older webkit-based browsers */
+		-moz-background-size: cover; /* For older Firefox */
+		-o-background-size: cover; /* For older Opera */
+	}
+	#background-video{
+		position: absolute;
 		width: 100%;
-		height: 75vh;
+		height: 100%;
+		object-fit: cover;
+		background-blend-mode: overlay;
+
+		z-index: 1;
 	}
 	.rightSection {
 	  display: none !important;
+	  z-index: 9;
 	}
 	.leftSection{
 		width: 100%;
@@ -407,29 +426,36 @@ nav>.navLinks>#DD::after {
 			flex-direction: column;
 		justify-content: center;
 		align-items: start;
+		z-index: 9;
 	}
 	
 	#brandName{
-		font-size: 110px;
+		font-size: 100px;
 		font-weight: bolder;
-		color: var(--text);
+		color: var(--text-hover);
 
 	}
 	#discription{
 		font-size: 50px;	
 		margin: 20px 0;	
 		font-weight:500;	
-		color: var(--text);
+		color: var(--text-hover);
 	
 	}
 	
 	#slogan{
 		font-size: 30px;
-		color: var(--text);
+		color: var(--text-hover);
 	
 	}
   }
 
+  @media (min-width: 700px) {
+	#background-video{
+		display: none;
+	}
+
+  }
 /* Hero Section Finish */
 
 /* Doctor Section Start */
