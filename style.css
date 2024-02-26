@@ -1,37 +1,89 @@
 /* @media (prefers-color-scheme: dark) { */
+
+/* } */
+
 :root {
-  /* --text: #0a1c4d; */
   --text: #10296d;
   --text-hover: #f1f1f1;
-  --bg: #fbfefd;
+  --bg: #fbfbfb;
   --nav-bg: #f0f0f0;
   --primary: #5c8dff;
   --secondary: #8fbaef;
   --accent: #4e6ce480;
 }
-/* } */
+
+/* Hide scrollbar for Firefox */
+.hide-scroll-bar {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+  }
+  .hide-scroll-bar::-webkit-scrollbar {
+	display: none;
+  }
+  
+
+/*  */
+/* To Delete */
+.b {
+  border: dotted 1px black;
+  margin: 10px;
+}
+
+/*  */
 
 body {
   margin: 0;
-  background-color: rgb(235, 235, 235);
+  padding: 0;
+  width: 100%;
+  background-color: var(--bg);
+}
+
+main {
+  /* width: 100%; */
+  height: 50%;
+  text-overflow: ellipsis;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+/* Nav CSS Started */
+
+@media (min-width: 700px) {
+  .navLinks {
+    display: flex;
+  }
+  .bugerMenu {
+    display: none !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .navLinks {
+    display: none !important;
+  }
+  .bugerMenu {
+    display: block; /* or display: flex; depending on your design */
+  }
 }
 
 nav {
   position: sticky;
   top: 0;
-  background-color: #fff; /*This will remove */
-  /* background-color: var(--nav-bg); */
+  background-color: var(--nav-bg);
   width: 100%;
   height: 75px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 4px 8px rgba(78, 108, 228, 0.503);
+  box-shadow: 0 4px 8px var(--accent);
+  z-index: 1000;
 }
 
 #logo {
   width: auto;
-  height: 90%;
+  height: 120%;
   aspect-ratio: 1/1;
   margin: 0 20px;
 }
@@ -45,7 +97,6 @@ nav {
 a {
   text-decoration: none;
   color: var(--text);
-
 }
 
 lable {
@@ -86,7 +137,6 @@ lable::after {
   color: var(--text);
   font-size: larger;
   padding: 0 7px 10px 7px;
-
 }
 
 .navLinks > li:hover {
@@ -94,7 +144,7 @@ lable::after {
 }
 
 .navLinks > li:hover a {
-  color:var(--text-hover);
+  color: var(--text-hover);
 }
 /* .navLinks > li > a:target {
   border: solid 2px red;
@@ -102,21 +152,22 @@ lable::after {
 } */
 
 .bugerMenu {
+	all: unset;
+
   height: auto;
-  margin: 0 20px;
-  padding: 5px 12px;
-  border: solid 1px var(--primary);
+  margin: 0 10px;
+  padding: 5px 9px;
+  /* border: solid 1px var(--primary); */
   border-radius: 5px;
-  background-color: var(--secondary);
+  /* background-color: var(--secondary); */
   color: var(--text);
 }
 
 .dialogLinks > li {
   font-size: large;
   list-style-type: none;
-  margin: 5px;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
 }
 
 lable::after {
@@ -124,7 +175,6 @@ lable::after {
   margin-left: -22px;
   color: var(--text);
 }
-
 
 .dialogLinks > li:hover {
   background-color: var(--primary);
@@ -143,11 +193,13 @@ lable::after {
 }
 
 .dialogCloseBtn > button {
+	all: unset;
   padding: 5px 12px;
-  border: solid 1px var(--primary);
+  /* border: solid 1px var(--primary); */
   border-radius: 5px;
-  background-color: var(--secondary);
-  color: var(--text);
+  /* background-color: var(--secondary); */
+  /* color: var(--text); */
+
 }
 dialog {
   position: absolute;
@@ -157,6 +209,8 @@ dialog {
   max-height: 500px;
   border: none;
   border-radius: 10px;
+  padding: 15px 30px;
+  padding-right: 15px;
   box-shadow: 0 4px 18px rgba(78, 108, 228, 0.503);
 }
 
@@ -165,7 +219,23 @@ dialog::backdrop {
   /* filter: blur(90px); */
 }
 
-#DD::after {
+dialog>.dialogLinks>li{
+	font-size: 20px;
+	text-decoration: none;
+
+}
+
+dialog>.dialogLinks>ul>li>a{
+	font-size: 20px;
+	text-decoration: none;
+
+}
+dialog>.dialogLinksDropDown>ul>ul>li>a{
+	font-size: 20px;
+	text-decoration: none;
+
+}
+nav>.navLinks>#DD::after {
   content: "▾";
   color: var(--text);
 }
@@ -181,16 +251,15 @@ dialog::backdrop {
   position: relative;
 }
 
-.dropDown > li > a{
+.dropDown > li > a {
   font-size: larger;
 }
-.dropDown:hover > li > a{
+.dropDown:hover > li > a {
   color: var(--text-hover);
 }
 
-.dropDown:hover{
+.dropDown:hover {
   background-color: var(--primary);
-  
 }
 .dropDown > .foldedDropDown {
   display: none;
@@ -215,18 +284,21 @@ dialog::backdrop {
   left: 0%;
 }
 
-
 .insideDropDown {
   display: flex;
   align-items: flex-end;
   font-size: large;
   list-style-type: none;
-  padding:3px 10px;
+  padding: 3px 10px;
   position: relative;
   border-bottom: solid 1px white;
 }
 
-.insideDropDown:hover{
+.dialogLinksDropDown{
+	padding-left:10px;
+}
+
+.insideDropDown:hover {
   background-color: var(--primary);
   /* color: var(--text-hover); */
 }
@@ -260,25 +332,237 @@ dialog::backdrop {
   left: 98%;
 }
 
-.dropDown > .foldedDropDown > li:hover{
+.dropDown > .foldedDropDown > li:hover {
   background-color: var(--primary);
 }
 
-@media (min-width: 700px) {
-  .navLinks {
-    display: flex;
-  }
-  .bugerMenu {
-    display: none;
-  }
+/* Nav CSS Finished */
+
+/* Hero Section (Home Page) CSS Started */
+
+#heroSection {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.leftSection,
+.rightSection {
+  width: 45%;
+  height: 100%;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.leftSection{
+	display: flex;
+	padding-left: 60px;
+		flex-direction: column;
+	justify-content: center;
+	align-items: start;
+}
+
+#brandName{
+	font-size: 190px;
+	color: var(--text);
+	font-weight: bolder;
+	margin-bottom: -40px;
+}
+#discription{
+	font-size: 100px;		
+	margin-bottom: 20px;
+	font-weight: bold;
+	color: var(--text);
+
+}
+
+#slogan{
+	font-size: 50px;
+	color: var(--text);
+
+}
+.heroImg {
+  width: auto;
+  height: 100%;
 }
 
 @media (max-width: 700px) {
-  .navLinks {
-    display: none;
+	#heroSection {
+		width: 100%;
+		height: 75vh;
+	}
+	.rightSection {
+	  display: none !important;
+	}
+	.leftSection{
+		width: 100%;
+		height: auto;
+		display: flex;
+		padding-left: 5px !important;
+			flex-direction: column;
+		justify-content: center;
+		align-items: start;
+	}
+	
+	#brandName{
+		font-size: 110px;
+		font-weight: bolder;
+		color: var(--text);
+
+	}
+	#discription{
+		font-size: 50px;	
+		margin: 20px 0;	
+		font-weight:500;	
+		color: var(--text);
+	
+	}
+	
+	#slogan{
+		font-size: 30px;
+		color: var(--text);
+	
+	}
   }
-  .bugerMenu {
-    display: block; /* or display: flex; depending on your design */
-  }
+
+/* Hero Section Finish */
+
+/* Doctor Section Start */
+
+#doctorSection {
+  width: 99%;
+  height: 70vh;
+  margin: 5px 60px;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
+#SectionHeader {
+	font-size: 50px;
+	text-align: center;
+	margin: 10px 0;
+	text-decoration: underline;
+  }
+
+#doctorCardContainer {
+  width:79%;
+  height: 500px;
+  display: flex;
+  position: relative;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  /* margin-right: 100px; Add margin to the right for the vertical bar */
+}
+
+/* #doctorCardContainer::after {
+	content: " ";
+	width: 10px;
+	height: 90%;
+	background-color: #10296d;
+	position: absolute;
+	top: 0;
+	right: 0; 
+  } */
+  
+#doctorCard {
+  width: 240px;
+  min-width: 240px;
+  max-width: 300px;
+  height: 240px;
+  max-height: fit-content;
+  padding-top: 100px;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 10px;
+  margin-top: 90px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px var(--secondary);
+}
+
+#photo {
+  width: auto;
+  height: 40%;
+  position: absolute;
+  top: -20%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 100%;
+  box-shadow: 4px 0 8px var(--secondary);
+}
+
+.doctorCardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#details {
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#details > #doctorCardName {
+  font-size: larger;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+#position {
+  font-size: large;
+  font-weight: 500;
+}
+
+#introContainer {
+  height: 54%;
+  overflow: hidden;
+  text-emphasis: after;
+  padding: 5px 10px;
+  text-align: center;
+}
+#intro {
+  margin-top: 10px;
+  font-size: medium;
+  font-weight: lighter;
+  text-overflow: ellipsis;
+}
+
+.s1 {
+  width: 100%;
+  height: 100vh;
+}
+.s {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 700px) {
+	#doctorCardContainer {
+		width:95%;
+	  }
+	  #SectionHeader {
+		font-size: 35px;
+	  }
+
+}

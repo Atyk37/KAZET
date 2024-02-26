@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+        }
+        form{
+            width: 30%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+    </style>
+  </head>
+  <body>
+    <form action="/"     autocomplete="off">
+      <div>
+        <input type="text" placeholder="Name" id="name" />
+        <input type="number" placeholder="Age" id="age" />
+        <div>
+          Male<input type="radio" name="Male" value="male" id="" />
+          Female<input type="radio" name="Female" value="female" id="" />
+        </div>
+        <textarea id="" cols="30" rows="10">
+            ရောကာလက္ခဏာများ
+        </textarea>
+      </div>
+      <input type="tel" name="Phone" placeholder="Phone Number" id="">
+      <input type="datetime-local" name="Appoinment"  id="">
+      <button type="submit">Book</button>
+    </form>
+  </body>
+</html>
