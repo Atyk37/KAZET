@@ -113,6 +113,7 @@ lable::after {
   color: var(--text);
 }
 
+
 .navLinks > li > a {
   color: var(--text);
   font-size: larger;
@@ -268,6 +269,12 @@ nav > .navLinks > #DD::after {
   padding: 3px 10px;
   position: relative;
   border-bottom: solid 1px white;
+}
+
+.insideDropDown::after {
+  content: "▾";
+  margin-left:1px;
+  color: var(--text);
 }
 
 .dialogLinksDropDown {
@@ -464,7 +471,7 @@ nav > .navLinks > #DD::after {
 /* Doctor Section Start */
 
 #doctorSection {
-  width: 99%;
+  max-width: 99%;
   height: 70vh;
   margin: 5px 60px;
   padding: 0 20px;
@@ -476,6 +483,7 @@ nav > .navLinks > #DD::after {
 
 #SectionHeader {
   font-size: 50px;
+  color: var(--text);
   text-align: center;
   margin: 10px 0;
   text-decoration: underline;
@@ -533,14 +541,26 @@ nav > .navLinks > #DD::after {
   height: 100%;
   object-fit: cover;
 }
+
+.doctorPhoto{
+  width: 45%;
+  height: 100%;
+}
 #details {
   height: 250px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+#allDetails {
+  width: 45%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
 
-#details > #doctorCardName {
+#doctorCardName {
   font-size: larger;
   font-weight: 700;
   margin: 10px 0;
@@ -565,6 +585,13 @@ nav > .navLinks > #DD::after {
   text-overflow: ellipsis;
 }
 
+.doctorPhotoContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .s1 {
   width: 100%;
   height: 100vh;
@@ -583,3 +610,63 @@ nav > .navLinks > #DD::after {
     font-size: 35px;
   }
 }
+
+
+/* Disease Section Started */
+.diseaseSection{
+  width: 99%;
+  max-width: 99%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#diseaseCardContainer{
+  /* width: 99%; */
+  height: 70vh;
+  margin-top: 50px; 
+  margin: 0 50px;
+  display: flex;
+  position: relative;
+  overflow-x: auto;
+  white-space: nowrap; 
+  /* background-color: var(--primary);  */
+  
+}
+
+#diseaseCard{
+    /* background-color: var(--); */
+    min-width: 300px;
+    height: 440px;
+    overflow: hidden;
+    text-align: justify;
+    border-radius: 15px;
+    margin: 5px 10px;
+    box-shadow: 0 4px 8px var(--secondary);
+    display: inline-block;
+
+}
+#diseaseCard:hover{
+  box-shadow: 0 8px 16px var(--secondary);
+}
+
+#textCard{
+    padding: 10px;
+    text-overflow: ellipsis;
+    height: 150px;
+    #titleAndDate{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      #title{
+        font-size: 25px;
+        font-weight: 600;
+      }
+      #date{
+        font-size: 15px;
+      }
+    }
+}
+
+/* Disease section End */
