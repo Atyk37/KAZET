@@ -24,7 +24,7 @@
                 <li><a href="#">Service 3</a></li>
               </div>
             </div>
-            <li><a href="#">Service 3</,href=></li>
+            <li><a href="#">Service 3</a></li>
           </div>
         </ul>
         <ul id="DD" class="dropDown">
@@ -47,13 +47,17 @@
       </div>
 
       <!-- This is for Moblie Screeen Size -->
-      <button class="bugerMenu" onclick=" NavDialog.showModal()"><img src="./asset/menu.svg" alt=""></button>
+      <button class="bugerMenu" onclick=" NavDialog.showModal()">
+        <img src="./asset/menu.svg" alt="" />
+      </button>
       <dialog id="NavDialog">
         <div class="dialogCloseBtn">
-          <button onclick="NavDialog.close()"> <img src="/asset/close.svg" alt=""> </button>
+          <button onclick="NavDialog.close()">
+            <img src="/asset/close.svg" alt="" />
+          </button>
         </div>
         <div class="dialogLinks">
-          <li id="Home"><a href="/">Home</a></li>
+          <li id="Home"><a href="/" style="font-size: 30px">Home</a></li>
           <!-- <lable for="services">
             <select name="src" id="services">
               <option value=""><a href="/services">Services</a></option>
@@ -64,136 +68,267 @@
             </select>
           </lable> -->
           <ul id="DD" class="dialogLinksDropDown">
-            <li><a href="#">Services</a></li>
-              <li><a href="#">Service 1</a></li>
-                <ul class="dialogLinksDropDown">
-                  <li><a href="#">Service 1</a></li>
-                  <li><a href="#">S 2</a></li>
-                  <li><a href="#">Service 3</a></li>
-                </ul>
-              <li><a href="#">Service 3</href=></li>
+            <li type="none">
+              <a href="#" style="font-size: 25px">Services</a>
+            </li>
+            <li type="none">
+              <a href="#" style="font-size: 25px">Service 1</a>
+            </li>
+            <ul class="dialogLinksDropDown">
+              <li type="none">
+                <a href="#" style="font-size: 20px">Service 1</a>
+              </li>
+              <li type="none"><a href="#" style="font-size: 20px">S 2</a></li>
+              <li type="none">
+                <a href="#" style="font-size: 20px">Service 3</a>
+              </li>
+            </ul>
+            <li type="none" i>
+              <a href="#" style="font-size: 25px">Service 3</a>
+            </li>
           </ul>
 
-          <li id="About"><a href="/about">About</a></li>
-          <li id="Contact"><a href="/contact">Contact</a></li>
+          <li id="About"><a href="/about" style="font-size: 20px">About</a></li>
+          <li id="Contact">
+            <a href="/contact" style="font-size: 20px">Contact</a>
+          </li>
         </div>
       </dialog>
     </nav>
     <!-- <div id="links">
 
     </div> -->
-    <main id="main" >
+    <main id="main">
       <section id="heroSection">
         <video id="background-video" autoplay muted loop>
-          <source src="./asset/bg-video.mp4" type="video/mp4">
+          <!-- <source src="./asset/bg-video.mp4" type="video/mp4" /> -->
         </video>
         <div class="leftSection">
           <div id="brandName">KAZET</div>
           <div id="discription">Healthcare</div>
-          <div id="slogan">One stop digital clinic</div>
+          <div style="display: flex;">
+            <div id="slogan">One stop digital clinic</div>
+            <div style="padding: 5px 15px; background-color:;">Booking</div>
+          </div>
         </div>
         <div class="rightSection">
-          <img src="/asset/hero.gif" alt="Hero-gif" class="heroImg">
+          <img src="/asset/hero.gif" alt="Hero-gif" class="heroImg" />
         </div>
       </section>
 
       <section id="doctorSection">
         <div id="SectionHeader">Meet our Doctors</div>
         <div id="doctorCardContainer" class="hide-scroll-bar">
-          <div id="doctorCard" class=""> 
-            <div id="photo">
-              <img src="/asset/doctor.jpg" alt="doctor" class="doctorCardImage">
-            </div>
-            <div id="details">
-              <div id="doctorCardName">Dr. Stugin</div>
-              <div id="position">Sugery</div>
-              <div id="introContainer">
-                <div id="intro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam dolorum sunt quisquam! Esse harum similique assumenda molestiae illum saepe, fuga commodi animi in dolorum mollitia repellat, corporis dolore temporibus maiores, aliquam velit. Iusto tempore ex aperiam natus, praesentium fugiat nemo aliquam libero mollitia tenetur omnis placeat deserunt molestiae sint optio consectetur hic cum quidem officia doloremque rem adipisci veniam! Sequi ullam expedita doloribus error ea molestiae quos? Consequuntur vitae quo deserunt nesciunt architecto voluptates corporis possimus commodi quidem, id quaerat incidunt perspiciatis eius ipsum accusamus suscipit reiciendis nulla? Amet fugit pariatur quod doloremque expedita impedit sint placeat distinctio inventore. Incidunt?</div>
-  
-              </div>
-            </div>
-          </div>        
           <div id="doctorCard" class="">
             <div id="photo">
-              <img src="/asset/doctor.jpg" alt="doctor" class="doctorCardImage">
+              <img
+                src="/asset/doctor.jpg"
+                alt="doctor"
+                class="doctorCardImage"
+              />
             </div>
             <div id="details">
               <div id="doctorCardName">Dr. Stugin</div>
               <div id="position">Sugery</div>
               <div id="introContainer">
-                <div id="intro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam dolorum sunt quisquam! Esse harum similique assumenda molestiae illum saepe, fuga commodi animi in dolorum mollitia repellat, corporis dolore temporibus maiores, aliquam velit. Iusto tempore ex aperiam natus, praesentium fugiat nemo aliquam libero mollitia tenetur omnis placeat deserunt molestiae sint optio consectetur hic cum quidem officia doloremque rem adipisci veniam! Sequi ullam expedita doloribus error ea molestiae quos? Consequuntur vitae quo deserunt nesciunt architecto voluptates corporis possimus commodi quidem, id quaerat incidunt perspiciatis eius ipsum accusamus suscipit reiciendis nulla? Amet fugit pariatur quod doloremque expedita impedit sint placeat distinctio inventore. Incidunt?</div>
-  
-              </div>
-            </div>
-          </div> 
-          <div id="doctorCard" class="">
-            <div id="photo">
-              <img src="/asset/doctor.jpg" alt="doctor" class="doctorCardImage">
-            </div>
-            <div id="details">
-              <div id="doctorCardName">Dr. Stugin</div>
-              <div id="position">Sugery</div>
-              <div id="introContainer">
-                <div id="intro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam dolorum sunt quisquam! Esse harum similique assumenda molestiae illum saepe, fuga commodi animi in dolorum mollitia repellat, corporis dolore temporibus maiores, aliquam velit. Iusto tempore ex aperiam natus, praesentium fugiat nemo aliquam libero mollitia tenetur omnis placeat deserunt molestiae sint optio consectetur hic cum quidem officia doloremque rem adipisci veniam! Sequi ullam expedita doloribus error ea molestiae quos? Consequuntur vitae quo deserunt nesciunt architecto voluptates corporis possimus commodi quidem, id quaerat incidunt perspiciatis eius ipsum accusamus suscipit reiciendis nulla? Amet fugit pariatur quod doloremque expedita impedit sint placeat distinctio inventore. Incidunt?</div>
-  
-              </div>
-            </div>
-          </div>           
-		  <div id="doctorCard" class="">
-            <div id="photo">
-              <img src="/asset/doctor.jpg" alt="doctor" class="doctorCardImage">
-            </div>
-            <div id="details">
-              <div id="doctorCardName">Dr. Stugin</div>
-              <div id="position">Sugery</div>
-              <div id="introContainer">
-                <div id="intro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam dolorum sunt quisquam! Esse harum similique assumenda molestiae illum saepe, fuga commodi animi in dolorum mollitia repellat, corporis dolore temporibus maiores, aliquam velit. Iusto tempore ex aperiam natus, praesentium fugiat nemo aliquam libero mollitia tenetur omnis placeat deserunt molestiae sint optio consectetur hic cum quidem officia doloremque rem adipisci veniam! Sequi ullam expedita doloribus error ea molestiae quos? Consequuntur vitae quo deserunt nesciunt architecto voluptates corporis possimus commodi quidem, id quaerat incidunt perspiciatis eius ipsum accusamus suscipit reiciendis nulla? Amet fugit pariatur quod doloremque expedita impedit sint placeat distinctio inventore. Incidunt?</div>
-  
-              </div>
-            </div>
-          </div>           
-		  <div id="doctorCard" class="">
-            <div id="photo">
-              <img src="/asset/doctor.jpg" alt="doctor" class="doctorCardImage">
-            </div>
-            <div id="details">
-              <div id="doctorCardName">Dr. Stugin</div>
-              <div id="position">Sugery</div>
-              <div id="introContainer">
-                <div id="intro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam dolorum sunt quisquam! Esse harum similique assumenda molestiae illum saepe, fuga commodi animi in dolorum mollitia repellat, corporis dolore temporibus maiores, aliquam velit. Iusto tempore ex aperiam natus, praesentium fugiat nemo aliquam libero mollitia tenetur omnis placeat deserunt molestiae sint optio consectetur hic cum quidem officia doloremque rem adipisci veniam! Sequi ullam expedita doloribus error ea molestiae quos? Consequuntur vitae quo deserunt nesciunt architecto voluptates corporis possimus commodi quidem, id quaerat incidunt perspiciatis eius ipsum accusamus suscipit reiciendis nulla? Amet fugit pariatur quod doloremque expedita impedit sint placeat distinctio inventore. Incidunt?</div>
-  
+                <div id="intro">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Laboriosam dolorum sunt quisquam! Esse harum similique
+                  assumenda molestiae illum saepe, fuga commodi animi in dolorum
+                  mollitia repellat, corporis dolore temporibus maiores, aliquam
+                  velit. Iusto tempore ex aperiam natus, praesentium fugiat nemo
+                  aliquam libero mollitia tenetur omnis placeat deserunt
+                  molestiae sint optio consectetur hic cum quidem officia
+                  doloremque rem adipisci veniam! Sequi ullam expedita doloribus
+                  error ea molestiae quos? Consequuntur vitae quo deserunt
+                  nesciunt architecto voluptates corporis possimus commodi
+                  quidem, id quaerat incidunt perspiciatis eius ipsum accusamus
+                  suscipit reiciendis nulla? Amet fugit pariatur quod doloremque
+                  expedita impedit sint placeat distinctio inventore. Incidunt?
+                </div>
               </div>
             </div>
           </div>
-    		<div id="doctorCard" class="">
+          <div id="doctorCard" class="">
             <div id="photo">
-              <img src="/asset/doctor.jpg" alt="doctor" class="doctorCardImage">
+              <img
+                src="/asset/doctor.jpg"
+                alt="doctor"
+                class="doctorCardImage"
+              />
             </div>
             <div id="details">
               <div id="doctorCardName">Dr. Stugin</div>
               <div id="position">Sugery</div>
               <div id="introContainer">
-                <div id="intro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam dolorum sunt quisquam! Esse harum similique assumenda molestiae illum saepe, fuga commodi animi in dolorum mollitia repellat, corporis dolore temporibus maiores, aliquam velit. Iusto tempore ex aperiam natus, praesentium fugiat nemo aliquam libero mollitia tenetur omnis placeat deserunt molestiae sint optio consectetur hic cum quidem officia doloremque rem adipisci veniam! Sequi ullam expedita doloribus error ea molestiae quos? Consequuntur vitae quo deserunt nesciunt architecto voluptates corporis possimus commodi quidem, id quaerat incidunt perspiciatis eius ipsum accusamus suscipit reiciendis nulla? Amet fugit pariatur quod doloremque expedita impedit sint placeat distinctio inventore. Incidunt?</div>
-  
+                <div id="intro">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Laboriosam dolorum sunt quisquam! Esse harum similique
+                  assumenda molestiae illum saepe, fuga commodi animi in dolorum
+                  mollitia repellat, corporis dolore temporibus maiores, aliquam
+                  velit. Iusto tempore ex aperiam natus, praesentium fugiat nemo
+                  aliquam libero mollitia tenetur omnis placeat deserunt
+                  molestiae sint optio consectetur hic cum quidem officia
+                  doloremque rem adipisci veniam! Sequi ullam expedita doloribus
+                  error ea molestiae quos? Consequuntur vitae quo deserunt
+                  nesciunt architecto voluptates corporis possimus commodi
+                  quidem, id quaerat incidunt perspiciatis eius ipsum accusamus
+                  suscipit reiciendis nulla? Amet fugit pariatur quod doloremque
+                  expedita impedit sint placeat distinctio inventore. Incidunt?
+                </div>
               </div>
             </div>
-          </div>    
-		  <div id="doctorCard" class="">
+          </div>
+          <div id="doctorCard" class="">
             <div id="photo">
-              <img src="/asset/doctor.jpg" alt="doctor" class="doctorCardImage">
+              <img
+                src="/asset/doctor.jpg"
+                alt="doctor"
+                class="doctorCardImage"
+              />
             </div>
             <div id="details">
               <div id="doctorCardName">Dr. Stugin</div>
               <div id="position">Sugery</div>
               <div id="introContainer">
-                <div id="intro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam dolorum sunt quisquam! Esse harum similique assumenda molestiae illum saepe, fuga commodi animi in dolorum mollitia repellat, corporis dolore temporibus maiores, aliquam velit. Iusto tempore ex aperiam natus, praesentium fugiat nemo aliquam libero mollitia tenetur omnis placeat deserunt molestiae sint optio consectetur hic cum quidem officia doloremque rem adipisci veniam! Sequi ullam expedita doloribus error ea molestiae quos? Consequuntur vitae quo deserunt nesciunt architecto voluptates corporis possimus commodi quidem, id quaerat incidunt perspiciatis eius ipsum accusamus suscipit reiciendis nulla? Amet fugit pariatur quod doloremque expedita impedit sint placeat distinctio inventore. Incidunt?</div>
-  
+                <div id="intro">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Laboriosam dolorum sunt quisquam! Esse harum similique
+                  assumenda molestiae illum saepe, fuga commodi animi in dolorum
+                  mollitia repellat, corporis dolore temporibus maiores, aliquam
+                  velit. Iusto tempore ex aperiam natus, praesentium fugiat nemo
+                  aliquam libero mollitia tenetur omnis placeat deserunt
+                  molestiae sint optio consectetur hic cum quidem officia
+                  doloremque rem adipisci veniam! Sequi ullam expedita doloribus
+                  error ea molestiae quos? Consequuntur vitae quo deserunt
+                  nesciunt architecto voluptates corporis possimus commodi
+                  quidem, id quaerat incidunt perspiciatis eius ipsum accusamus
+                  suscipit reiciendis nulla? Amet fugit pariatur quod doloremque
+                  expedita impedit sint placeat distinctio inventore. Incidunt?
+                </div>
               </div>
             </div>
-          </div>           
-	
-          
-
+          </div>
+          <div id="doctorCard" class="">
+            <div id="photo">
+              <img
+                src="/asset/doctor.jpg"
+                alt="doctor"
+                class="doctorCardImage"
+              />
+            </div>
+            <div id="details">
+              <div id="doctorCardName">Dr. Stugin</div>
+              <div id="position">Sugery</div>
+              <div id="introContainer">
+                <div id="intro">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Laboriosam dolorum sunt quisquam! Esse harum similique
+                  assumenda molestiae illum saepe, fuga commodi animi in dolorum
+                  mollitia repellat, corporis dolore temporibus maiores, aliquam
+                  velit. Iusto tempore ex aperiam natus, praesentium fugiat nemo
+                  aliquam libero mollitia tenetur omnis placeat deserunt
+                  molestiae sint optio consectetur hic cum quidem officia
+                  doloremque rem adipisci veniam! Sequi ullam expedita doloribus
+                  error ea molestiae quos? Consequuntur vitae quo deserunt
+                  nesciunt architecto voluptates corporis possimus commodi
+                  quidem, id quaerat incidunt perspiciatis eius ipsum accusamus
+                  suscipit reiciendis nulla? Amet fugit pariatur quod doloremque
+                  expedita impedit sint placeat distinctio inventore. Incidunt?
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="doctorCard" class="">
+            <div id="photo">
+              <img
+                src="/asset/doctor.jpg"
+                alt="doctor"
+                class="doctorCardImage"
+              />
+            </div>
+            <div id="details">
+              <div id="doctorCardName">Dr. Stugin</div>
+              <div id="position">Sugery</div>
+              <div id="introContainer">
+                <div id="intro">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Laboriosam dolorum sunt quisquam! Esse harum similique
+                  assumenda molestiae illum saepe, fuga commodi animi in dolorum
+                  mollitia repellat, corporis dolore temporibus maiores, aliquam
+                  velit. Iusto tempore ex aperiam natus, praesentium fugiat nemo
+                  aliquam libero mollitia tenetur omnis placeat deserunt
+                  molestiae sint optio consectetur hic cum quidem officia
+                  doloremque rem adipisci veniam! Sequi ullam expedita doloribus
+                  error ea molestiae quos? Consequuntur vitae quo deserunt
+                  nesciunt architecto voluptates corporis possimus commodi
+                  quidem, id quaerat incidunt perspiciatis eius ipsum accusamus
+                  suscipit reiciendis nulla? Amet fugit pariatur quod doloremque
+                  expedita impedit sint placeat distinctio inventore. Incidunt?
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="doctorCard" class="">
+            <div id="photo">
+              <img
+                src="/asset/doctor.jpg"
+                alt="doctor"
+                class="doctorCardImage"
+              />
+            </div>
+            <div id="details">
+              <div id="doctorCardName">Dr. Stugin</div>
+              <div id="position">Sugery</div>
+              <div id="introContainer">
+                <div id="intro">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Laboriosam dolorum sunt quisquam! Esse harum similique
+                  assumenda molestiae illum saepe, fuga commodi animi in dolorum
+                  mollitia repellat, corporis dolore temporibus maiores, aliquam
+                  velit. Iusto tempore ex aperiam natus, praesentium fugiat nemo
+                  aliquam libero mollitia tenetur omnis placeat deserunt
+                  molestiae sint optio consectetur hic cum quidem officia
+                  doloremque rem adipisci veniam! Sequi ullam expedita doloribus
+                  error ea molestiae quos? Consequuntur vitae quo deserunt
+                  nesciunt architecto voluptates corporis possimus commodi
+                  quidem, id quaerat incidunt perspiciatis eius ipsum accusamus
+                  suscipit reiciendis nulla? Amet fugit pariatur quod doloremque
+                  expedita impedit sint placeat distinctio inventore. Incidunt?
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="doctorCard" class="">
+            <div id="photo">
+              <img
+                src="/asset/doctor.jpg"
+                alt="doctor"
+                class="doctorCardImage"
+              />
+            </div>
+            <div id="details">
+              <div id="doctorCardName">Dr. Stugin</div>
+              <div id="position">Sugery</div>
+              <div id="introContainer">
+                <div id="intro">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Laboriosam dolorum sunt quisquam! Esse harum similique
+                  assumenda molestiae illum saepe, fuga commodi animi in dolorum
+                  mollitia repellat, corporis dolore temporibus maiores, aliquam
+                  velit. Iusto tempore ex aperiam natus, praesentium fugiat nemo
+                  aliquam libero mollitia tenetur omnis placeat deserunt
+                  molestiae sint optio consectetur hic cum quidem officia
+                  doloremque rem adipisci veniam! Sequi ullam expedita doloribus
+                  error ea molestiae quos? Consequuntur vitae quo deserunt
+                  nesciunt architecto voluptates corporis possimus commodi
+                  quidem, id quaerat incidunt perspiciatis eius ipsum accusamus
+                  suscipit reiciendis nulla? Amet fugit pariatur quod doloremque
+                  expedita impedit sint placeat distinctio inventore. Incidunt?
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>

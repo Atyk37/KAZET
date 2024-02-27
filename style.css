@@ -14,13 +14,12 @@
 
 /* Hide scrollbar for Firefox */
 .hide-scroll-bar {
-	-ms-overflow-style: none;
-	scrollbar-width: none;
-  }
-  .hide-scroll-bar::-webkit-scrollbar {
-	display: none;
-  }
-  
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.hide-scroll-bar::-webkit-scrollbar {
+  display: none;
+}
 
 /*  */
 /* To Delete */
@@ -133,7 +132,7 @@ lable::after {
 } */
 
 .bugerMenu {
-	all: unset;
+  all: unset;
 
   height: auto;
   margin: 0 10px;
@@ -174,13 +173,12 @@ lable::after {
 }
 
 .dialogCloseBtn > button {
-	all: unset;
+  all: unset;
   padding: 5px 12px;
   /* border: solid 1px var(--primary); */
   border-radius: 5px;
   /* background-color: var(--secondary); */
   /* color: var(--text); */
-
 }
 dialog {
   position: absolute;
@@ -200,23 +198,20 @@ dialog::backdrop {
   /* filter: blur(90px); */
 }
 
-dialog>.dialogLinks>li{
-	font-size: 20px;
-	text-decoration: none;
-
+dialog > .dialogLinks > li {
+  font-size: 20px;
+  text-decoration: none;
 }
 
-dialog>.dialogLinks>ul>li>a{
-	font-size: 20px;
-	text-decoration: none;
-
+dialog > .dialogLinks > ul > li > a {
+  font-size: 20px;
+  text-decoration: none;
 }
-dialog>.dialogLinksDropDown>ul>ul>li>a{
-	font-size: 20px;
-	text-decoration: none;
-
+dialog > .dialogLinksDropDown > ul > ul > li > a {
+  font-size: 20px;
+  text-decoration: none;
 }
-nav>.navLinks>#DD::after {
+nav > .navLinks > #DD::after {
   content: "▾";
   color: var(--text);
 }
@@ -275,8 +270,8 @@ nav>.navLinks>#DD::after {
   border-bottom: solid 1px white;
 }
 
-.dialogLinksDropDown{
-	padding-left:10px;
+.dialogLinksDropDown {
+  padding-left: 10px;
 }
 
 .insideDropDown:hover {
@@ -317,26 +312,24 @@ nav>.navLinks>#DD::after {
   background-color: var(--primary);
 }
 
-
 @media (min-width: 700px) {
-	.navLinks {
-	  display: flex;
-	}
-	.bugerMenu {
-	  display: none !important;
-	}
+  .navLinks {
+    display: flex;
   }
-  
-  @media (max-width: 700px) {
-	.navLinks {
-	  display: none !important;
-	}
-	.bugerMenu {
-	  display: block; /* or display: flex; depending on your design */
-	}
+  .bugerMenu {
+    display: none !important;
+  }
+}
 
+@media (max-width: 700px) {
+  .navLinks {
+    display: none !important;
   }
-  
+  .bugerMenu {
+    display: block; /* or display: flex; depending on your design */
+  }
+}
+
 /* Nav CSS Finished */
 
 /* Hero Section (Home Page) CSS Started */
@@ -361,32 +354,30 @@ nav>.navLinks>#DD::after {
   overflow: hidden;
 }
 
-.leftSection{
-	display: flex;
-	padding-left: 60px;
-		flex-direction: column;
-	justify-content: center;
-	align-items: start;
+.leftSection {
+  display: flex;
+  padding-left: 60px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
 }
 
-#brandName{
-	font-size: 190px;
-	color: var(--text);
-	font-weight: bolder;
-	margin-bottom: -40px;
+#brandName {
+  font-size: 190px;
+  color: var(--text);
+  font-weight: bolder;
+  margin-bottom: -40px;
 }
-#discription{
-	font-size: 100px;		
-	margin-bottom: 20px;
-	font-weight: bold;
-	color: var(--text);
-
+#discription {
+  font-size: 100px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: var(--text);
 }
 
-#slogan{
-	font-size: 50px;
-	color: var(--text);
-
+#slogan {
+  font-size: 50px;
+  color: var(--text);
 }
 .heroImg {
   width: auto;
@@ -394,68 +385,62 @@ nav>.navLinks>#DD::after {
 }
 
 @media (max-width: 700px) {
-	#heroSection {
-		width: calc(100% + 40px);
-		height: 90vh;
-		padding: 0 -20px;
-		position: relative;
-		background: url(./asset/bg-video.mp4) no-repeat center center fixed;
-		background-size: cover;
-		-webkit-background-size: cover; /* For older webkit-based browsers */
-		-moz-background-size: cover; /* For older Firefox */
-		-o-background-size: cover; /* For older Opera */
-	}
-	#background-video{
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		background-blend-mode: overlay;
+  #heroSection {
+    width: calc(100% + 40px);
+    height: 90vh;
+    padding: 0 -20px;
+    position: relative;
+    background: url(./asset/bg-video.mp4) no-repeat center center fixed;
+    background-size: cover;
+    -webkit-background-size: cover; /* For older webkit-based browsers */
+    -moz-background-size: cover; /* For older Firefox */
+    -o-background-size: cover; /* For older Opera */
+  }
+  #background-video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-blend-mode: overlay;
 
-		z-index: 1;
-	}
-	.rightSection {
-	  display: none !important;
-	  z-index: 9;
-	}
-	.leftSection{
-		width: 100%;
-		height: auto;
-		display: flex;
-		padding-left: 5px !important;
-			flex-direction: column;
-		justify-content: center;
-		align-items: start;
-		z-index: 9;
-	}
-	
-	#brandName{
-		font-size: 100px;
-		font-weight: bolder;
-		color: var(--text-hover);
+    z-index: 1;
+  }
+  .rightSection {
+    display: none !important;
+    z-index: 9;
+  }
+  .leftSection {
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding-left: 5px !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    z-index: 9;
 
-	}
-	#discription{
-		font-size: 50px;	
-		margin: 20px 0;	
-		font-weight:500;	
-		color: var(--text-hover);
-	
-	}
-	
-	#slogan{
-		font-size: 30px;
-		color: var(--text-hover);
-	
-	}
   }
 
-  @media (min-width: 700px) {
-	#background-video{
-		display: none;
-	}
-
+  #brandName {
+    font-size: 100px;
+    font-weight: bolder;
   }
+  #discription {
+    font-size: 50px;
+    margin: 20px 0;
+    font-weight: 500;
+  }
+
+  #slogan {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 700px) {
+  #background-video {
+    display: none;
+  }
+}
 /* Hero Section Finish */
 
 /* Doctor Section Start */
@@ -472,14 +457,14 @@ nav>.navLinks>#DD::after {
 }
 
 #SectionHeader {
-	font-size: 50px;
-	text-align: center;
-	margin: 10px 0;
-	text-decoration: underline;
-  }
+  font-size: 50px;
+  text-align: center;
+  margin: 10px 0;
+  text-decoration: underline;
+}
 
 #doctorCardContainer {
-  width:79%;
+  width: 79%;
   height: 500px;
   display: flex;
   position: relative;
@@ -496,7 +481,7 @@ nav>.navLinks>#DD::after {
 	top: 0;
 	right: 0; 
   } */
-  
+
 #doctorCard {
   width: 240px;
   min-width: 240px;
@@ -572,23 +557,11 @@ nav>.navLinks>#DD::after {
   display: flex;
 }
 
-
-
-
-
-
-
-
-
-
-
-
 @media (max-width: 700px) {
-	#doctorCardContainer {
-		width:95%;
-	  }
-	  #SectionHeader {
-		font-size: 35px;
-	  }
-
+  #doctorCardContainer {
+    width: 95%;
+  }
+  #SectionHeader {
+    font-size: 35px;
+  }
 }
