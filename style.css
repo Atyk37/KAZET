@@ -695,6 +695,27 @@ nav > .navLinks > #DD:hover::after {
 
 /* Disease section End */
 
+/* Contact section Start */
+
+#contactcontainer{
+  display: flex;
+  justify-content: space-around;
+}
+
+#contactright{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+#contactuppercard{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Contact section End */
+
 /* Footer Started */
 
 /* footer {
