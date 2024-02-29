@@ -15,8 +15,10 @@
         <ul id="DD" class="dropDown">
           <li><a href="#">Services</a></li>
           <div class="foldedDropDown">
-            <li><a href="#">Service 1</a></li>
-            <div id="DD" class="insideDropDown">
+            <li><a href="#doctorSection">Doctors</a></li>
+            <li><a href="#blogs">Blog Posts</a></li>
+            <li><a href="#emergency">Emergency</a></li>
+            <!--   <div id="DD" class="insideDropDown">
               <li><span>Sub Service</span></li>
               <div class="foldedDropDown">
                 <li><a href="#">Service 1</a></li>
@@ -24,26 +26,37 @@
                 <li><a href="#">Service 3</a></li>
               </div>
             </div>
-            <li><a href="#">Service 3</a></li>
+            <li><a href="#">Service 3</a></li>-->
           </div>
         </ul>
         <ul id="DD" class="dropDown">
-          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
           <div class="foldedDropDown">
-            <li><a href="#">Service 1</a></li>
-            <div id="DD" class="insideDropDown">
+            <li><a href="#booking">Booking</a></li>
+            <!-- <div id="DD" class="insideDropDown">
               <li><span>Sub Service</span></li>
               <div class="foldedDropDown">
                 <li><a href="#">Service 1</a></li>
                 <li><a href="#">S 2</a></li>
                 <li><a href="#">Service 3</a></li>
               </div>
-            </div>
-            <li><a href="#">Service 3</a></li>
+            </div> -->
+            <!-- <li><a href="#">Service 3</a></li> -->
           </div>
         </ul>
-        <li id="About"><a href="/about">About</a></li>
-        <li id="Contact"><a href="/contact">Contact</a></li>
+        <li id="About"><a href="/about">About us</a></li>
+        <!-- <li id="Contact"><a href="/contact">Contact</a></li> -->
+        <div id="searchContainer">
+          <input
+            type="search"
+            placeholder="ရောဂါအကြောင်းတွေရှာမယ်...."
+            name=""
+            id="searchBox"
+          />
+          <button style="all: unset; margin-bottom: 0px">
+            <img src="/asset/search.svg" alt="" />
+          </button>
+        </div>
       </div>
 
       <!-- This is for Moblie Screeen Size -->
@@ -68,30 +81,37 @@
             </select>
           </lable> -->
           <ul id="DD" class="dialogLinksDropDown">
-            <li type="none">
+            <!-- <li type="none">
               <a href="#" style="font-size: 25px">Services</a>
+            </li> -->
+            <a href="#doctorSection" style="font-size: 20px">Doctors</a>
+            <!-- </li> -->
+            <li type="none">
+              <a href="#blogs" style="font-size: 20px">Blog Posts</a>
             </li>
             <li type="none">
+              <a href="#emergency" style="font-size: 20px">Emergency</a>
+            </li>
+            <!-- <li type="none">
               <a href="#" style="font-size: 25px">Service 1</a>
-            </li>
-            <ul class="dialogLinksDropDown">
+            </li> -->
+            <!-- <ul class="dialogLinksDropDown">
               <li type="none">
-                <a href="#" style="font-size: 20px">Service 1</a>
+                <a href="#doctorSection" style="font-size: 20px">Doctors</a>
               </li>
-              <li type="none"><a href="#" style="font-size: 20px">S 2</a></li>
+              <li type="none"><a href="#blogs" style="font-size: 20px">Blog Posts</a></li>
               <li type="none">
-                <a href="#" style="font-size: 20px">Service 3</a>
+                <a href="#emergency" style="font-size: 20px">Emergency</a>
               </li>
-            </ul>
-            <li type="none" i>
+            </ul> -->
+            <!-- <li type="none" i>
               <a href="#" style="font-size: 25px">Service 3</a>
-            </li>
+            </li> -->
           </ul>
-
-          <li id="About"><a href="/about" style="font-size: 20px">About</a></li>
           <li id="Contact">
-            <a href="/contact" style="font-size: 20px">Contact</a>
+            <a href="/booking" style="font-size: 20px">Booking</a>
           </li>
+          <li id="About"><a href="/about" style="font-size: 20px">About</a></li>
         </div>
       </dialog>
     </nav>
@@ -119,7 +139,7 @@
       </section>
 
       <section id="doctorSection">
-        <div id="SectionHeader">Meet our Doctors</div>
+        <a href="/doctors.html" id="SectionHeader">Meet our Doctors</a>
         <div id="doctorCardContainer" class="hide-scroll-bar">
           <div id="doctorCard" class="">
             <div id="photo">
@@ -334,8 +354,8 @@
         </div>
       </section>
 
-      <section id="doctorSection " class="diseaseSection">
-        <div id="SectionHeader">Blog Posts</div>
+      <section id="blogs" class="diseaseSection">
+        <a href="/diseases.html" id="SectionHeader">Diseases</a>
         <div id="doctorCardContainer" class="hide-scroll-bar">
           <div id="diseaseCard">
             <div id="imageCard">
@@ -456,11 +476,29 @@
               </p>
             </div>
           </div>
-
-
         </div>
       </section>
     </main>
-    <footer id="footer"></footer>
+    <footer id="footcontainer">
+        <div id="uppercard">
+          <div>
+            <img id="footerLogo" src="/asset/logo.png" />
+          </div>
+          <div>
+            <p style="color: var(--bg)">FOLLOW US</p>
+          </div>
+          <div id="">
+            <a href="#">home</a>
+            <a href="#">home</a>
+            <a href="#">home</a>
+            <a href="#">home</a>
+            <a href="#">home</a>
+            <a href="#">home</a>
+          </div>
+        </div>
+        <div id="bottomcard">
+          ©KAZET 2024. All right reserved.
+        </div>
+    </footer>
   </body>
 </html>

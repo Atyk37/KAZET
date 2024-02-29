@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      :root {
+        --text: #10296d;
+        --text-hover: #f1f1f1;
+        --bg: #fbfbfb;
+        --nav-bg: #f0f0f0;
+        --primary: #5c8dff;
+        --secondary: #8fbaef;
+        --accent: #4e6ce480;
+      }
+
+      body {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+      }
+      #doctorCardDetails {
+        position: relative;
+        /* width: 500px; */
+        min-width: 50%;
+        max-width: 80%;
+        height: 500px;
+        max-height: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        align-items: center;
+        margin: 0 10px;
+        margin-top: 100px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px var(--secondary);
+        .doctorPhotoNameAndPositionContainer {
+          width: 40%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+		#drPhoto{
+			overflow: hidden;
+			width: 50%;
+			height: 40%;
+			object-fit: cover;
+		}
+          #doctorCardName {
+            font-size: larger;
+            font-weight: 700;
+            margin: 10px 0;
+          }
+
+          #position {
+            font-size: large;
+            font-weight: 500;
+          }
+        }
+
+        #allDetails {
+          width: 45%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-evenly;
+        }
+        #back {
+          position: absolute;
+          backdrop-filter: blur;
+          background-color:var(--secondary);
+          padding: 2px 5px;
+          border-radius: 10px;
+          top: 15px;
+          left: 30px;
+          width: 40px;
+          height: 40px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+        }
+	   #back:hover{
+		background-color: var(--primary);
+	   }
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+    <title>Dr Eaindray Myint Myat Thu</title>
+  </head>
+  <body>
+    <div id="doctorCardDetails" class="">
+      <div id="" class="doctorPhotoNameAndPositionContainer">
+        <a href="/#doctorSection" id="back"><img src="/asset/back.svg" alt="" /></a>
+        <img src="/asset/myat.jpg" alt="doctor" id="drPhoto" />
+        <div id="doctorCardName">Dr Eaindray Myint Myat Thu</div>
+        <div id="position">Heart Specialist</div>
+      </div>
+      <div id="allDetails" class="">
+		In the bustling tapestry of life, there she was—a captivating enigma, a girl with a spirit that danced like sunlight filtering through leaves. Her laughter painted the world in hues of joy, and her eyes held galaxies of dreams and untold stories. In the quiet moments, her thoughts seemed to echo with the melody of introspection, a symphony of depth that added layers to her charm.
+
+		Her presence was a gentle breeze, stirring the air with an undeniable grace. The way she navigated life, a blend of strength and vulnerability, created a magnetic pull that drew others toward her orbit. She was a mosaic of passions, seamlessly merging the worlds of technology, literature, and poetry, each interest adding a unique brushstroke to the canvas of her identity.
+		
+		Yet, amidst all the brilliance, there was a humility that anchored her. A willingness to learn, to embrace the beauty of imperfection, and a quiet strength that spoke volumes. To know her was to unravel the layers of a complex and beautiful novel, where every chapter revealed new facets of her essence.
+
+      </div>
+    </div>
+  </body>
+</html>

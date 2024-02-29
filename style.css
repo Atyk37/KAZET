@@ -33,8 +33,33 @@
 body {
   margin: 0;
   padding: 0;
-  width: 100%;
+  /* width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; */
   background-color: var(--bg);
+  font-family:"Z01-Umoe002";
+}
+
+::-webkit-scrollbar {
+  z-index: 5;
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f100;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 main {
@@ -51,7 +76,7 @@ main {
 nav {
   position: sticky;
   top: 0;
-  background-color: var(--nav-bg);
+  background-color: var(--text);
   width: 100%;
   height: 75px;
   display: flex;
@@ -63,8 +88,8 @@ nav {
 
 #logo {
   width: auto;
-  height: 120%;
-  aspect-ratio: 1/1;
+  height: 100%;
+  /* aspect-ratio: 1/1; */
   margin: 0 20px;
 }
 
@@ -73,10 +98,28 @@ nav {
   margin: 0 20px;
   height: 100%;
 }
+#searchContainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  border-bottom: solid 1px var(--text);
+  /* border-right: solid 1px var(--text); */
+  margin: 15px 5px;
+  padding-right: 2px ;
+  #searchBox {
+    all: unset;
+  }
+  #searchBox::placeholder {
+    color: var(--text-hover);
+  }
+  #searchBox:focus{
+    background-color: #1d63a0;
+  }
+}
 
 a {
   text-decoration: none;
-  color: var(--text);
+  color: var(--text-hover);
 }
 
 lable {
@@ -95,7 +138,7 @@ select {
   padding: 5px 10px;
   margin: 0 10px;
   /* background-color: var(--primary); */
-  color: var(--text);
+  color: var(--text-hover);
 }
 
 .navLinks > li {
@@ -110,22 +153,22 @@ select {
 lable::after {
   content: "▾";
   margin-left: -22px;
-  color: var(--text);
+  color: var(--text-hover);
 }
 
-
 .navLinks > li > a {
-  color: var(--text);
+  color: var(--text-hover);
   font-size: larger;
   padding: 0 7px 10px 7px;
 }
 
 .navLinks > li:hover {
-  background-color: var(--primary);
+  background-color: var(--text-hover);
+  color: var(--text);
 }
 
 .navLinks > li:hover a {
-  color: var(--text-hover);
+  color: var(--text);
 }
 /* .navLinks > li > a:target {
   border: solid 2px red;
@@ -141,7 +184,7 @@ lable::after {
   /* border: solid 1px var(--primary); */
   border-radius: 5px;
   /* background-color: var(--secondary); */
-  color: var(--text);
+  color: var(--text-hover);
 }
 
 .dialogLinks > li {
@@ -154,14 +197,14 @@ lable::after {
 lable::after {
   content: "▾";
   margin-left: -22px;
-  color: var(--text);
+  color: var(--text-hover);
 }
 
 .dialogLinks > li:hover {
-  background-color: var(--primary);
+  background-color: var(--text-hover);
 }
 .dialogLinks > li:hover {
-  background-color: var(--primary);
+  background-color: var(--text-hover);
 }
 /* .dialogLinks > li > a:target {
   border: solid 2px red;
@@ -214,6 +257,10 @@ dialog > .dialogLinksDropDown > ul > ul > li > a {
 }
 nav > .navLinks > #DD::after {
   content: "▾";
+  color: var(--text-hover);
+}
+nav > .navLinks > #DD:hover::after {
+  content: "▾";
   color: var(--text);
 }
 
@@ -232,11 +279,11 @@ nav > .navLinks > #DD::after {
   font-size: larger;
 }
 .dropDown:hover > li > a {
-  color: var(--text-hover);
+  color: var(--text);
 }
 
 .dropDown:hover {
-  background-color: var(--primary);
+  background-color: var(--bg);
 }
 .dropDown > .foldedDropDown {
   display: none;
@@ -254,7 +301,7 @@ nav > .navLinks > #DD::after {
   width: max-content;
   display: block;
   background-color: var(--secondary);
-  color: var(--text);
+  color: var(--text-hover);
   position: absolute;
   margin-top: 2px;
   top: 98%;
@@ -273,8 +320,8 @@ nav > .navLinks > #DD::after {
 
 .insideDropDown::after {
   content: "▾";
-  margin-left:1px;
-  color: var(--text);
+  margin-left: 1px;
+  color: var(--text-hover);
 }
 
 .dialogLinksDropDown {
@@ -402,7 +449,7 @@ nav > .navLinks > #DD::after {
   border-radius: 20px;
 }
 
-#booking:hover{
+#booking:hover {
   background-color: #10296dcc;
 }
 .heroImg {
@@ -525,6 +572,11 @@ nav > .navLinks > #DD::after {
   box-shadow: 0 4px 8px var(--secondary);
 }
 
+#doctorCard:hover {
+  box-shadow: 0 8px 16px var(--secondary);
+}
+
+
 #photo {
   width: auto;
   height: 40%;
@@ -542,7 +594,7 @@ nav > .navLinks > #DD::after {
   object-fit: cover;
 }
 
-.doctorPhoto{
+.doctorPhoto {
   width: 45%;
   height: 100%;
 }
@@ -551,24 +603,6 @@ nav > .navLinks > #DD::after {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-#allDetails {
-  width: 45%;
-  height: 100%;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-#doctorCardName {
-  font-size: larger;
-  font-weight: 700;
-  margin: 10px 0;
-}
-
-#position {
-  font-size: large;
-  font-weight: 500;
 }
 
 #introContainer {
@@ -583,13 +617,6 @@ nav > .navLinks > #DD::after {
   font-size: medium;
   font-weight: lighter;
   text-overflow: ellipsis;
-}
-
-.doctorPhotoContainer{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .s1 {
@@ -611,9 +638,8 @@ nav > .navLinks > #DD::after {
   }
 }
 
-
 /* Disease Section Started */
-.diseaseSection{
+.diseaseSection {
   width: 99%;
   max-width: 99%;
   display: flex;
@@ -622,51 +648,122 @@ nav > .navLinks > #DD::after {
   align-items: center;
 }
 
-#diseaseCardContainer{
+#diseaseCardContainer {
   /* width: 99%; */
   height: 70vh;
-  margin-top: 50px; 
+  margin-top: 50px;
   margin: 0 50px;
   display: flex;
   position: relative;
   overflow-x: auto;
-  white-space: nowrap; 
+  white-space: nowrap;
   /* background-color: var(--primary);  */
-  
 }
 
-#diseaseCard{
-    /* background-color: var(--); */
-    min-width: 300px;
-    height: 440px;
-    overflow: hidden;
-    text-align: justify;
-    border-radius: 15px;
-    margin: 5px 10px;
-    box-shadow: 0 4px 8px var(--secondary);
-    display: inline-block;
-
+#diseaseCard {
+  /* background-color: var(--); */
+  min-width: 300px;
+  height: 440px;
+  overflow: hidden;
+  text-align: justify;
+  border-radius: 15px;
+  margin: 5px 10px;
+  box-shadow: 0 4px 8px var(--secondary);
+  display: inline-block;
 }
-#diseaseCard:hover{
+#diseaseCard:hover {
   box-shadow: 0 8px 16px var(--secondary);
 }
 
-#textCard{
-    padding: 10px;
-    text-overflow: ellipsis;
-    height: 150px;
-    #titleAndDate{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      #title{
-        font-size: 25px;
-        font-weight: 600;
-      }
-      #date{
-        font-size: 15px;
-      }
+#textCard {
+  padding: 10px;
+  text-overflow: ellipsis;
+  height: 150px;
+  #titleAndDate {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    #title {
+      font-size: 25px;
+      font-weight: 600;
     }
+    #date {
+      font-size: 15px;
+    }
+  }
 }
 
 /* Disease section End */
+
+/* Footer Started */
+
+/* footer {
+  border-top: solid var(--text) 1px;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+
+  span{
+    color: var(--text);
+  } */
+
+  
+#footercontainer{
+  display: flex;
+  color: var(--text-hover);
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap:unset;
+  margin: 10px 20px;
+
+}
+
+
+#footright{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+}
+
+#uppercard{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#bottomcard{
+  color: var(--text-hover);
+  margin: 10px 0;
+}
+
+p{
+ margin: 20px 30px;
+}
+
+footer{
+  background-color: var(--text);
+}
+
+#footcontainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+}
+
+
+@media (max-width: 700px) {
+  #footerLogo{
+    width: 100px;
+  }
+}
+
+/* Footer Ended */
